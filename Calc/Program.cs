@@ -48,7 +48,7 @@ while (!endApp)
 
         else
         {
-            Console.WriteLine($"Your result: {result}");
+            Console.WriteLine("Your result: {0:0.##}\n", result);
         }
     }
     catch (Exception ex)
