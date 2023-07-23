@@ -1,8 +1,9 @@
-﻿using Calc;
+﻿using CalculatorLibrary;
 
 bool endApp = false;
 Console.WriteLine( "C# simple calculator");
 Console.WriteLine(  "___________________________");
+Calculator calculator = new Calculator();
 while (!endApp)
 {
     string input1 = "";
@@ -40,7 +41,7 @@ while (!endApp)
 
     try
     {
-        result = Calculator.DoOperation(num1, num2, op);
+        result = calculator.DoOperation(num1, num2, op);
         if (double.IsNaN(result))
         {
             Console.WriteLine("Error in math operation");
@@ -64,4 +65,6 @@ while (!endApp)
     }
 
 }
+
+calculator.Finish();
 
